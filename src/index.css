@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .sim-cataract {
+    filter: blur(2.5px) contrast(0.75) brightness(0.95);
+  }
+  .sim-protanopia {
+    filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><filter id="f"><feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0 0.558, 0.442, 0, 0, 0 0 0.242, 0.758, 0, 0 0, 0, 0, 1, 0"/></filter></svg>#f');
+  }
+  .sim-deuteranopia {
+    filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><filter id="f"><feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0 0.7, 0.3, 0, 0, 0 0, 0.3, 0.7, 0, 0 0, 0, 0, 1, 0"/></filter></svg>#f');
+  }
+  .sim-dyslexia {
+    font-family: 'Comic Sans MS', cursive, sans-serif !important;
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.18em !important;
+    line-height: 1.9 !important;
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+}

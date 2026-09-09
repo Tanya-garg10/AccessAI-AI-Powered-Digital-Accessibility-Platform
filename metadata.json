@@ -1,0 +1,6 @@
+{
+  "name": "AccessAI",
+  "description": "AI-powered accessibility auditing, personalized recommendations, and intelligent fixes for inclusive digital experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
