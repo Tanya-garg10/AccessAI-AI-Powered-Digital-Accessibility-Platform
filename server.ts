@@ -8,8 +8,15 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Handle both ES modules and CommonJS environments
+let __dirname: string;
+try {
+  const __filename = fileURLToPath(import.meta.url);
+  __dirname = path.dirname(__filename);
+} catch {
+  // Fallback for CommonJS/production builds
+  __dirname = process.cwd();
+}
 
 const app = express();
 const PORT = 3000;
